@@ -1,0 +1,50 @@
+Sounds fun! 
+
+Below is everything. 
+
+Rob 
+
+>From: Yoav Freund <YFreund@banter.com> 
+>Date: Mon, 23 Dec 2002 08:44:05 -0800 
+> 
+>Hi Rob, 
+>I would like to resurrect the mind reading project, and I think I 
+>have an opportunity to do that in Mitsubishi, hopefully including building a 
+>hardware 
+>version of it. 
+> 
+>I would like to use your c code as a demo and a starting point. Would that 
+>be ok with you? 
+>If so,B  you email me the c code for the "race" program that you once wrote? 
+>Thanks! 
+> 
+>Yoav 
+
+Here is the uuencode'd compress'd tar'd source code. 
+
+Save this message, uudecode, uncompress and untar. 
+Then type "make race" to compile.B  The executable will be called 
+"race".B  The instructions are pretty self-explanatory. 
+
+All games will be archived in <compile-dir>/archive, where 
+<compile-dir> is the directory in which the code was compiled. 
+To change this directory, see the documentation in the makefile. 
+
+If you want to run with Hagelbarger's algorithm, in the makefile, 
+change 
+
+B  EXPERT_LIST = var_tree_exp_sym_py, var_tree_exp_sym_y 
+B  EXPERT_FILES_o = var_tree_exp_sym_py.o var_tree_exp_sym_y.o dutch_trees.o 
+
+to 
+
+B  EXPERT_LIST = hagelbarger_exp 
+B  EXPERT_FILES_o = hagelbarger.o 
+
+and re-make.B  (I realize this is really clunky.) 
+
+Probably best not to distribute this source code. 
+
+
+
+exp.tar.Z B  

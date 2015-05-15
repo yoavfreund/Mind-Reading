@@ -1,0 +1,83 @@
+From: Jake Hofman <jmh@microsoft.com>
+To: Yoav Freund <yfreund@eng.ucsd.edu>
+Subject: Re: followup from this morning's chat
+Date: January 15, 2015 at 4:40:49 PM EST
+
+hi yoav,
+
+there are a lot of jquery and d3 tutorials out there. i don’t remember which, if any, i fully went through, but here are some suggestions.
+
+i like interactive tutorials for these things. try:
+
+	http://try.jquery.com
+	http://www.codecademy.com/en/tracks/jquery
+	https://www.codeschool.com/courses/try-jquery
+
+this site has a generally useful and concise set of tutorials for html, css, and jquery:
+	
+	http://learn.shayhowe.com
+
+i would keep it minimal in terms of how deep to go into this. jquery is basically useful for selecting and modifying DOM elements, interacting with a server using ajax calls, and adding interaction in the form of click/hover/etc events.
+
+it seems like more of what you want is to easily draw on SVG canvases. d3 is great for this. here’s a very simple intro:
+
+	http://christopheviau.com/d3_tutorial/
+
+and here is a long list and book:
+
+	https://github.com/mbostock/d3/wiki/Tutorials
+	https://leanpub.com/D3-Tips-and-Tricks
+
+more to the point, here is a simple example of code to draw circles on a mouse click. (this is something the adaboost demo needs, right? i can’t get the java applet to run on my machine, sadly.)
+
+	http://jsfiddle.net/GordyD/0o71rhug/1/
+
+jsfiddle is generally useful in that you can edit and execute code in the browser and see the results immediately, btw.
+
+and as for your question of responsiveness, here is a game written in d3:
+
+	http://insanity.jkozlovsky.cz
+
+it’s pretty quick for me, although i had a little trouble using it on my iphone.
+
+as i mentioned, this simple project has many of the elements you’re interested in, with minimal other stuff:
+
+	http://jhofman.github.io/flights/
+
+it uses jquery, d3, and some css (bootstrap) to make things desktop and mobile friendly.
+
+the core javascript running everything is here:
+
+	https://github.com/jhofman/flights/blob/gh-pages/js/flights.jsi
+
+it uses the d3.csv function to grab data from a server file, parses it into the proper data structures, and then uses d3 to draw a bar chart. jquery extensions handle autocomplete and other functions.
+
+if you want to log back to a server, you would use the ajax call in jquery and create a server-side script to receive the call and write to a database. php is usually an easy option, although mongo could be good too. i’d think node.js is overkill, but i’ve never actually written anything with it.
+
+by the way, pretty much everything i know about is bookmarked on my delicious page, easily navigable by tags. so, for instance, here are those frameworks i mentioned to build mobile apps using html/css/javascript:
+
+	https://delicious.com/jhofman/mobile,javascript
+
+happy to spend an hour in person talking about all this if that would be useful. it would probably lessen the learning curve.
+
+best,
+jake
+
+
+On Jan 14, 2015, at 4:35 PM, Yoav Freund <yfreund@eng.ucsd.edu> wrote:
+
+Hi Jake,
+
+My first goal is to recreate my adaboost applet and the mind-reading applet using javascript. Do you think that D3 is the best platform for this or would I be better off using something like jcanvas: http://calebevans.me/projects/jcanvas/
+or jquery-svg: http://keith-wood.name/svg.html
+
+In any case, please point me to good jQuery and D3 tutorials.
+
+Yoav
+
+thanks for the pointers on dc.js and crossfilter. happy to recommend some d3 and jquery references, if that’s useful. just let me know.
+
+best,
+jake
+
+
